@@ -1,7 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+   FILE *inputPointer = freopen("InputData.txt", "r", stdin);
+	FILE *outputPointer = freopen("OutputResult.txt", "a+", stdout);
 
+	int n;
+	cin>>n;
+	while(n--){
 double a[3],b[3],c[3],d[3];
 for(int i=0;i<3;i++){
     cin>>a[i]>>b[i]>>c[i]>>d[i];
@@ -37,11 +42,16 @@ x=x1;
 y=y1;
 z=z1;
 
-cout<<"Iteration "<<(i+1)<<" "<<endl;
-cout<<"x = "<<x<<endl;
-cout<<"y = "<<y<<endl;
-cout<<"z = "<<z<<endl<<endl;
+//cout<<"Iteration "<<(i+1)<<" "<<endl;
+//cout<<"x = "<<x<<endl;
+//cout<<"y = "<<y<<endl;
+//cout<<"z = "<<z<<endl<<endl;
 }
+double x2,x3,x4,x5,y2,y3,y4,y5,z2,z3,z4,z5;
+
+x2 = floor(x);
+x3 = ceil(x);
+
 cout<<"The answer is : "<<endl;
 cout<<"x = "<<x<<endl;
 cout<<"y = "<<y<<endl;
@@ -52,7 +62,9 @@ cout<<"z = "<<z<<endl;
     cout<<"Invalid Input for this system!!!!"<<endl;
     return 0;
  }
-
+ 	}
+fclose(inputPointer);
+	fclose(outputPointer);
       return 0;
 }
 
